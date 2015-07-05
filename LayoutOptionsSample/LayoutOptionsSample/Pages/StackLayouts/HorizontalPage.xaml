@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title="StackLayout Horizontal"
+             x:Class="LayoutOptionsSample.Pages.StackLayouts.HorizontalPage">
+  <ContentPage.Resources>
+    <ResourceDictionary>
+      <Style TargetType="Label">
+        <Setter Property="FontSize" Value="10" />
+        <Style.Triggers>
+          <Trigger TargetType="Label" Property="Label.BackgroundColor" Value="Yellow">
+            <Setter Property="Label.TextColor" Value="Black" />
+          </Trigger>
+          <Trigger TargetType="Label" Property="Label.BackgroundColor" Value="Fuchsia">
+            <Setter Property="Label.TextColor" Value="Black" />
+          </Trigger>
+          <Trigger TargetType="Label" Property="Label.BackgroundColor" Value="Aqua">
+            <Setter Property="Label.TextColor" Value="Black" />
+          </Trigger>
+          <Trigger TargetType="Label" Property="Label.BackgroundColor" Value="Red">
+            <Setter Property="Label.TextColor" Value="Black" />
+          </Trigger>
+        </Style.Triggers>
+      </Style>
+    </ResourceDictionary>
+  </ContentPage.Resources>
+  <ScrollView>
+    <StackLayout>
+      <Entry Placeholder="Minimum Length" x:Name="MinLength" />
+      <Entry Placeholder="Maximum Length" x:Name="MaxLength" />
+      <Entry Placeholder="Combinations To Skip" x:Name="MinCombination" />
+      <Entry Placeholder="Maximum Combinations" x:Name="MaxCombination" />
+      <Button Text="Generate Combinations" x:Name="GenerateButton" />
+      <StackLayout x:Name="MainPanel"
+                   HorizontalOptions="Fill">
+        <!--<StackLayout>
+        <Label Text="HStartAndExpand 100W"  HorizontalOptions="StartAndExpand"  WidthRequest="100" BackgroundColor="Aqua" />
+        <Label Text="HEndAndExpand 100W"    HorizontalOptions="EndAndExpand"    WidthRequest="100" BackgroundColor="Blue" />
+        <Label Text="HCenterAndExpand 100W" HorizontalOptions="CenterAndExpand" WidthRequest="100" BackgroundColor="Green" />
+        <Label Text="HFillAndExpand 100W"   HorizontalOptions="FillAndExpand"   WidthRequest="100" BackgroundColor="Red" />
+
+        <Label Text="HStart 100W"  HorizontalOptions="Start"  WidthRequest="100" BackgroundColor="Green" />
+        <Label Text="HEnd 100w"    HorizontalOptions="End"    WidthRequest="100" BackgroundColor="Blue" />
+        <Label Text="HCenter 100w" HorizontalOptions="Center" WidthRequest="100" BackgroundColor="Yellow" />
+        <Label Text="HFill 100w"   HorizontalOptions="Fill"   WidthRequest="100" BackgroundColor="Fuchsia" />
+
+        <Label Text="HStartAndExpand"  HorizontalOptions="StartAndExpand"  BackgroundColor="Aqua" />
+        <Label Text="HEndAndExpand"    HorizontalOptions="EndAndExpand"    BackgroundColor="Blue" />
+        <Label Text="HCenterAndExpand" HorizontalOptions="CenterAndExpand" BackgroundColor="Green" />
+        <Label Text="HFillAndExpand"   HorizontalOptions="FillAndExpand"   BackgroundColor="Red" />
+
+        <Label Text="HStart"  HorizontalOptions="Start"  BackgroundColor="Green" />
+        <Label Text="HEnd"    HorizontalOptions="End"    BackgroundColor="Blue" />
+        <Label Text="HCenter" HorizontalOptions="Center" BackgroundColor="Yellow" />
+        <Label Text="HFill"   HorizontalOptions="Fill"   BackgroundColor="Fuchsia" />
+      </StackLayout>
+
+      <StackLayout HorizontalOptions="Fill">
+        <Frame>
+          <StackLayout Orientation="Horizontal" HorizontalOptions="Fill">
+            <Label Text="HStart"  HorizontalOptions="Start"  BackgroundColor="Green" />
+            <Label Text="HEnd"    HorizontalOptions="End"    BackgroundColor="Blue" />
+            <Label Text="HCenter" HorizontalOptions="Center" BackgroundColor="Yellow" />
+            <Label Text="HFill"   HorizontalOptions="Fill"   BackgroundColor="Fuchsia" />
+          </StackLayout>
+        </Frame>
+
+        <Frame>
+          <StackLayout Orientation="Horizontal" HorizontalOptions="Fill">
+            <Label Text="HStart"  HorizontalOptions="Start"  BackgroundColor="Green" />
+            <Label Text="HCenter" HorizontalOptions="Center" BackgroundColor="Yellow" />
+            <Label Text="HEnd"    HorizontalOptions="End"    BackgroundColor="Blue" />
+            <Label Text="HFill"   HorizontalOptions="Fill"   BackgroundColor="Fuchsia" />
+          </StackLayout>
+        </Frame>
+
+        <Frame>
+          <StackLayout Orientation="Horizontal" HorizontalOptions="Fill">
+            <Label Text="HStart"  HorizontalOptions="Start"  BackgroundColor="Green" />
+            <Label Text="HEnd"    HorizontalOptions="End"    BackgroundColor="Blue" />
+            <Label Text="HCenter" HorizontalOptions="Center" BackgroundColor="Yellow" />
+          </StackLayout>
+        </Frame>
+
+        <Frame>
+          <StackLayout Orientation="Horizontal" HorizontalOptions="Fill">
+            <Label Text="HStart"  HorizontalOptions="Start"  BackgroundColor="Green" />
+            <Label Text="HEnd"    HorizontalOptions="End"    BackgroundColor="Blue" />
+          </StackLayout>
+        </Frame>
+
+        <Frame>
+          <StackLayout Orientation="Horizontal" HorizontalOptions="Fill">
+            <Label Text="HStart"  HorizontalOptions="Start"  BackgroundColor="Green" />
+            <Label Text="HCenter" HorizontalOptions="Center" BackgroundColor="Yellow" />
+          </StackLayout>
+        </Frame>
+
+        <Frame>
+          <StackLayout Orientation="Horizontal" HorizontalOptions="Fill">
+            <Label Text="HCenter" HorizontalOptions="Center" BackgroundColor="Yellow" />
+            <Label Text="HEnd"    HorizontalOptions="End"    BackgroundColor="Blue" />
+          </StackLayout>
+        </Frame>
+
+        <Frame>
+          <StackLayout Orientation="Horizontal" HorizontalOptions="Fill">
+            <Label Text="HFill"   HorizontalOptions="Fill"   BackgroundColor="Fuchsia" />
+            <Label Text="HStart"  HorizontalOptions="Start"  BackgroundColor="Green" />
+          </StackLayout>
+        </Frame>
+
+        <Frame>
+          <StackLayout Orientation="Horizontal" HorizontalOptions="Fill">
+            <Label Text="HFill"   HorizontalOptions="Fill"   BackgroundColor="Fuchsia" />
+            <Label Text="HEnd"    HorizontalOptions="End"    BackgroundColor="Blue" />
+          </StackLayout>
+        </Frame>
+
+        <Frame>
+          <StackLayout Orientation="Horizontal" HorizontalOptions="Fill">
+            <Label Text="HStartAndExpand"  HorizontalOptions="StartAndExpand"  BackgroundColor="Green" />
+            <Label Text="HEnd"             HorizontalOptions="End"             BackgroundColor="Blue" />
+          </StackLayout>
+        </Frame>
+
+        <Frame>
+          <StackLayout Orientation="Horizontal" HorizontalOptions="Fill">
+            <Label Text="HStart"        HorizontalOptions="Start"        BackgroundColor="Green" />
+            <Label Text="HEndAndExpand" HorizontalOptions="EndAndExpand" BackgroundColor="Blue" />
+          </StackLayout>
+        </Frame>
+
+        <Frame>
+          <StackLayout Orientation="Horizontal" HorizontalOptions="Fill">
+            <Label Text="HStart"           HorizontalOptions="Start"           BackgroundColor="Green" />
+            <Label Text="HCenterAndExpand" HorizontalOptions="CenterAndExpand" BackgroundColor="Yellow" />
+            <Label Text="HEnd"             HorizontalOptions="End"             BackgroundColor="Blue" />
+          </StackLayout>
+        </Frame>
+
+        <Frame>
+          <StackLayout Orientation="Horizontal" HorizontalOptions="Fill">
+            <Label Text="HStart"         HorizontalOptions="Start"         BackgroundColor="Green" />
+            <Label Text="HEnd"           HorizontalOptions="End"           BackgroundColor="Blue" />
+            <Label Text="HFillAndExpand" HorizontalOptions="FillAndExpand" BackgroundColor="Yellow" />
+          </StackLayout>
+        </Frame>
+
+        <Frame>
+          <StackLayout Orientation="Horizontal" HorizontalOptions="Fill">
+            <Label Text="HStart"           HorizontalOptions="Start"         BackgroundColor="Green" />
+            <Label Text="HCenterAndExpand" HorizontalOptions="CenterAndExpand" BackgroundColor="Yellow" />
+            <Label Text="HEnd"             HorizontalOptions="End"           BackgroundColor="Blue" />
+            <Label Text="HFillAndExpand"   HorizontalOptions="FillAndExpand" BackgroundColor="Yellow" />
+          </StackLayout>
+        </Frame>
+      </StackLayout>-->
+      </StackLayout>
+
+      <Button Text="Next Set of Combinations" x:Name="NextSetButton" IsVisible="False" />
+
+    </StackLayout>
+  </ScrollView>
+</ContentPage>

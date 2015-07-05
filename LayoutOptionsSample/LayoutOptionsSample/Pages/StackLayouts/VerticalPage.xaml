@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title="StackLayout Vertical"
+             x:Class="LayoutOptionsSample.Pages.StackLayouts.VerticalPage">
+  <ContentPage.Resources>
+    <ResourceDictionary>
+      <Style TargetType="Label">
+        <Setter Property="FontSize" Value="10" />
+      </Style>
+    </ResourceDictionary>
+  </ContentPage.Resources>
+  <ScrollView>
+    <StackLayout VerticalOptions="Fill" Orientation="Horizontal">
+      <Label Text="VStartAndExpand 100W"  VerticalOptions="StartAndExpand"  HeightRequest="100" BackgroundColor="Aqua"/>
+      <Label Text="VEndAndExpand 100W"    VerticalOptions="EndAndExpand"    HeightRequest="100" BackgroundColor="Blue"/>
+      <Label Text="VCenterAndExpand 100W" VerticalOptions="CenterAndExpand" HeightRequest="100" BackgroundColor="Green"/>
+      <Label Text="VFillAndExpand 100W"   VerticalOptions="FillAndExpand"   HeightRequest="100" BackgroundColor="Red"/>
+
+      <Label Text="VStart 100W"  VerticalOptions="Start"  HeightRequest="100" BackgroundColor="Green"/>
+      <Label Text="VEnd 100w"    VerticalOptions="End"    HeightRequest="100" BackgroundColor="Blue"/>
+      <Label Text="VCenter 100w" VerticalOptions="Center" HeightRequest="100" BackgroundColor="Yellow" TextColor="Black"/>
+      <Label Text="VFill 100w"   VerticalOptions="Fill"   HeightRequest="100" BackgroundColor="Fuchsia"/>
+
+      <Label Text="VStartAndExpand"  VerticalOptions="StartAndExpand"  BackgroundColor="Aqua"/>
+      <Label Text="VEndAndExpand"    VerticalOptions="EndAndExpand"    BackgroundColor="Blue"/>
+      <Label Text="VCenterAndExpand" VerticalOptions="CenterAndExpand" BackgroundColor="Green"/>
+      <Label Text="VFillAndExpand"   VerticalOptions="FillAndExpand"   BackgroundColor="Red"/>
+
+      <Label Text="VStart"  VerticalOptions="Start"  BackgroundColor="Green"/>
+      <Label Text="VEnd"    VerticalOptions="End"    BackgroundColor="Blue"/>
+      <Label Text="VCenter" VerticalOptions="Center" BackgroundColor="Yellow" TextColor="Black"/>
+      <Label Text="VFill"   VerticalOptions="Fill"   BackgroundColor="Fuchsia"/>
+
+    </StackLayout>
+  </ScrollView>
+</ContentPage>
