@@ -6,9 +6,16 @@
   <Application.Resources>
     <ResourceDictionary>
       <Style TargetType="Frame">
-        <Setter Property="OutlineColor" Value="White" />
+        <Setter Property="OutlineColor" Value="Gray" />
         <Setter Property="HasShadow" Value="False" />
         <Setter Property="Padding" Value="5" />
+      </Style>
+      <Style TargetType="ContentPage" x:Key="DefaultContentPageStyle">
+        <Setter Property="ContentPage.Padding">
+          <Setter.Value>
+            <OnPlatform x:TypeArguments="Thickness" iOS="0, 20, 0, 0" />
+          </Setter.Value>
+        </Setter>
       </Style>
     </ResourceDictionary>
   </Application.Resources>

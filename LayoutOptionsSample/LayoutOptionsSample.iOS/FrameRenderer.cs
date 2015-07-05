@@ -45,4 +45,4 @@ namespace LayoutOptionsSample.iOS
             return style.Setters.FirstOrDefault(s => s.Property == Xamarin.Forms.Frame.PaddingProperty);
         }
     }
-}}
+}
